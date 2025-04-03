@@ -23,7 +23,7 @@ function Delcl(props) {
     else{
       // console.log("Hi");
     axios
-      .post("http://localhost:3000/get-name", {
+      .post("https://test-gjac.onrender.com/get-name", {
         username: formdata.username,
       })
       .then((res) => {
@@ -43,7 +43,7 @@ function Delcl(props) {
   };
   function deleteit() {
     axios
-      .post("http://localhost:3000/delete-client", {
+      .post("https://test-gjac.onrender.com/delete-client", {
         username: formdata.username,
       })
       .then((res) => {

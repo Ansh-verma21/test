@@ -10,7 +10,7 @@ function View(props) {
 
   function chit() {
     let i = document.getElementById("status").innerText;
-    axios.post("http://localhost:3000/change", {
+    axios.post("https://test-gjac.onrender.com/change", {
       st: i === "OFF" ? 0 : 1,
       id: props.id_view,
     })
@@ -27,13 +27,13 @@ function View(props) {
   }
 
   function chitt() {
-    axios.post("http://localhost:3000/checki", {
+    axios.post("https://test-gjac.onrender.com/checki", {
       id: props.id_view
     }).then((res) => {
       setcon(res.data);
     });
 
-    axios.post("http://localhost:3000/find", props).then((res) => {
+    axios.post("https://test-gjac.onrender.com/find", props).then((res) => {
       setdata(res.data);
     });
   }
@@ -46,13 +46,13 @@ function View(props) {
     if (props.login === "Out") {
       navigate("/home");
     } else {
-      axios.post("http://localhost:3000/checki", {
+      axios.post("https://test-gjac.onrender.com/checki", {
         id: props.id_view
       }).then((res) => {
         setcon(res.data);
       });
 
-      axios.post("http://localhost:3000/find", props).then((res) => {
+      axios.post("https://test-gjac.onrender.com/find", props).then((res) => {
         setdata(res.data);
       });
     }

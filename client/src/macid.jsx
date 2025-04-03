@@ -7,7 +7,7 @@ function Macid(props){
     props.change(event.target.id, event.target.value);
   }
   useEffect(() => {
-        axios.post("http://localhost:3000/device-select", props).then((res) => {
+        axios.post("https://test-gjac.onrender.com/device-select", props).then((res) => {
       setdata(res.data);
     });
   },[]);
