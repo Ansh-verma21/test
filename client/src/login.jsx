@@ -25,7 +25,7 @@ function Login(props) {
     event.preventDefault();
     if (event.target.id === "Admin") {
       axios
-        .post("https://test-k4h3.onrender.com/login", {
+        .post("http://localhost:3000/login", {
           userinput,
           flag: "admin",
         })
@@ -44,7 +44,7 @@ function Login(props) {
         //});
     } else {
       axios
-        .post("https://test-k4h3.onrender.com/login", {
+        .post("http://localhost:3000/login", {
           clientinput,
           flag: "client",
         })

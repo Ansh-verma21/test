@@ -8,7 +8,7 @@ function District(props) {
   }
   useEffect(() => {
     if (props.login == "Admin" && data != []) {
-    axios.get("https://test-k4h3.onrender.com/district-select").then((res) => {
+    axios.get("http://localhost:3000/district-select").then((res) => {
       setdata(res.data);
     });
   }

@@ -38,7 +38,7 @@ function Delete(props) {
     }
 
     axios
-      .post("https://test-k4h3.onrender.com/devicecheck", {
+      .post("http://localhost:3000/devicecheck", {
         id: formdata.mac,
       })
       .then((res) => {
@@ -58,7 +58,7 @@ function Delete(props) {
   };
   function deleteit() {
     axios
-      .post("https://test-k4h3.onrender.com/delete-device", {
+      .post("http://localhost:3000/delete-device", {
         id: formdata.mac,
       })
       .then((res) => {

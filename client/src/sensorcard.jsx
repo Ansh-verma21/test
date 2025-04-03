@@ -11,18 +11,18 @@ function SensorCard(props) {
   useEffect(() => {
     if (props.login == "Client" || props.login == "Admin") {
       document.getElementById("all").checked = true;
-      axios.post("https://test-k4h3.onrender.com/device-select", props).then((res) => {
+      axios.post("http://localhost:3000/device-select", props).then((res) => {
         setstat([]);
         setstatcpy([]);
         res.data.map((ele) => {
           axios
-            .post("https://test-k4h3.onrender.com/find", {
+            .post("http://localhost:3000/find", {
               id_view: ele["uniqueId"],
             })
             .then((resu) => {
 
                 axios
-                  .post("https://test-k4h3.onrender.com/checki", {
+                  .post("http://localhost:3000/checki", {
                     id: ele["uniqueId"],
                   })
                   .then((nres) => {
@@ -80,7 +80,7 @@ function SensorCard(props) {
   }
   function chitst(event) {
     let i=event.target.checked;
-    axios.post("https://test-k4h3.onrender.com/change",{id:event.target.id,st:event.target.checked?0:1}).then((res)=>{if(i){
+    axios.post("http://localhost:3000/change",{id:event.target.id,st:event.target.checked?0:1}).then((res)=>{if(i){
       event.target.checked=true;
     }
   else{

@@ -10,7 +10,7 @@ function View(props) {
 
   function chit() {
     let i = document.getElementById("status").innerText;
-    axios.post("https://test-k4h3.onrender.com/change", {
+    axios.post("http://localhost:3000/change", {
       st: i === "OFF" ? 0 : 1,
       id: props.id_view,
     })
@@ -27,13 +27,13 @@ function View(props) {
   }
 
   function chitt() {
-    axios.post("https://test-k4h3.onrender.com/checki", {
+    axios.post("http://localhost:3000/checki", {
       id: props.id_view
     }).then((res) => {
       setcon(res.data);
     });
 
-    axios.post("https://test-k4h3.onrender.com/find", props).then((res) => {
+    axios.post("http://localhost:3000/find", props).then((res) => {
       setdata(res.data);
     });
   }
@@ -46,13 +46,13 @@ function View(props) {
     if (props.login === "Out") {
       navigate("/home");
     } else {
-      axios.post("https://test-k4h3.onrender.com/checki", {
+      axios.post("http://localhost:3000/checki", {
         id: props.id_view
       }).then((res) => {
         setcon(res.data);
       });
 
-      axios.post("https://test-k4h3.onrender.com/find", props).then((res) => {
+      axios.post("http://localhost:3000/find", props).then((res) => {
         setdata(res.data);
       });
     }
