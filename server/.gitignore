@@ -29,9 +29,7 @@ out/
 *.db-wal
 *.db-shm
 dump.rdb
-*.pem
-*.pem.crt
-*pem.key
+
 
 # Ignore temporary files
 tmp/
