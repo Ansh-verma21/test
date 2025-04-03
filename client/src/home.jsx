@@ -23,7 +23,7 @@ function Home(props) {
       navigate("/");
     } else {
       axios
-        .post("http://localhost:3000/get-name", {
+        .post("https://test-k4h3.onrender.com/get-name", {
           username: val.username,
           password: val.password,
         })

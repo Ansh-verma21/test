@@ -8,7 +8,7 @@ function Location(props) {
   }
   useEffect(() => {
     if (props.login == "Admin" && data != []) {
-    axios.get("http://localhost:3000/location-select").then((res) => {
+    axios.get("https://test-k4h3.onrender.com/location-select").then((res) => {
       setdata(res.data);
     });
   }

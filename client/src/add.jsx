@@ -30,7 +30,7 @@ function Add(props) {
   };
 
   const fetchClients = (value) => {
-    axios.get("http://localhost:3000/client-select").then((res) => {
+    axios.get("https://test-k4h3.onrender.com/client-select").then((res) => {
       const filteredClients = res.data.filter((name) =>
         name.toLowerCase().includes(value.toLowerCase())
       );
@@ -75,7 +75,7 @@ function Add(props) {
     }
      else {
       axios
-        .post("http://localhost:3000/devicecheck", {
+        .post("https://test-k4h3.onrender.com/devicecheck", {
           id: macAddress,device_name:device_name
         })
         .then((res) => {
@@ -84,7 +84,7 @@ function Add(props) {
             setFlag(res.data);
           } else {
             axios
-              .post("http://localhost:3000/add-data", formValues)
+              .post("https://test-k4h3.onrender.com/add-data", formValues)
               .then((res) => {setFlag("Device Added Successfully")})
               .catch((err) => setFlag("Some Error Occured!"));
           }

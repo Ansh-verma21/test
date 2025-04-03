@@ -6,7 +6,7 @@ function Refid(props) {
       props.change(event.target.id, event.target.value);
     }
     useEffect(() => {
-          axios.post("http://localhost:3000/device-select", props).then((res) => {
+          axios.post("https://test-k4h3.onrender.com/device-select", props).then((res) => {
         res.data.sort((a,b)=>{b['device-name'].localeCompare(a['device-name'])})
         setdata(res.data);
       });

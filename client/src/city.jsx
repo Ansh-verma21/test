@@ -8,7 +8,7 @@ function City(props) {
   var ds = props.ds;
   useEffect(() => {
     if (props.login == "Admin" && data != []) {
-    axios.get("http://localhost:3000/city-select").then((res) => {
+    axios.get("https://test-k4h3.onrender.com/city-select").then((res) => {
       setdata(res.data);
     });
   }
